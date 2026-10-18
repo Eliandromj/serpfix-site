@@ -52,13 +52,23 @@
       <li>Equipamentos, ordens de serviço, checklists, medições, serviços, materiais, valores, recebimentos, agendamentos e retornos.</li>
       <li>Fotos dos equipamentos, comprimidas no celular e gravadas sem dados de localização (EXIF), e os PDFs emitidos.</li>
     </ul>
+    <h3>Das consultas de inteligência artificial, quando você usa</h3>
+    <ul>
+      <li>A foto da etiqueta do aparelho ou do painel com o código de erro, o código, a marca e o modelo que você digita e o resultado de cada consulta.</li>
+      <li>O saldo de consultas grátis da conta.</li>
+    </ul>
+    <h3>Do interesse no Pro, quando você toca em "Tenho interesse"</h3>
+    <ul>
+      <li>Nome, telefone, e-mail e cidade do seu perfil de prestador e o e-mail da conta, se houver, enviados por e-mail à equipe do SerpFix.</li>
+      <li>Um identificador do aparelho, a quantidade de ordens de serviço e de equipamentos, a versão do app, a versão do Android e o modelo do celular. CPF e CNPJ não vão.</li>
+    </ul>
     <h3>O que não coletamos</h3>
     <ul>
       <li>Localização do aparelho, lista de contatos, histórico de navegação ou dados de outros apps.</li>
       <li>Ferramentas de análise de uso, publicidade ou rastreamento.</li>
     </ul>
     <p>
-      A câmera e a galeria só são usadas quando você escolhe tirar ou anexar uma foto. Os lembretes da agenda
+      A câmera e a galeria só são usadas quando você escolhe tirar ou anexar uma foto, inclusive a foto de uma consulta de IA. Os lembretes da agenda
       são agendados no próprio celular e não passam por servidores.
     </p>
 
@@ -68,6 +78,14 @@
         <strong>Prestar o serviço que você usa</strong>: criar e manter a conta, guardar os seus dados na nuvem,
         recuperá-los em outro celular, gerar o PDF e enviar os e-mails de acesso (base legal: execução de contrato,
         art. 7º, V, da LGPD).
+      </li>
+      <li>
+        <strong>Ler etiquetas e pesquisar códigos de erro pela IA</strong>, só quando você pede, e controlar o saldo
+        de consultas da conta (base legal: execução de contrato, art. 7º, V).
+      </li>
+      <li>
+        <strong>Medir o interesse no Pro</strong>, quando você toca em "Tenho interesse", que diz o que é enviado
+        (base legal: consentimento, art. 7º, I). Você pode pedir a eliminação desse registro pelo canal de contato.
       </li>
       <li>
         <strong>Segurança</strong>: proteger a conta, evitar uso indevido e manter cópias de segurança
@@ -90,6 +108,15 @@
       <li><strong>Google</strong>: envia os e-mails de acesso (pelo Gmail) e, se você escolher, faz a entrada com a conta Google.</li>
       <li><strong>BrasilAPI</strong>: recebe o CNPJ que você digita para buscar os dados públicos da empresa, só quando você pede.</li>
       <li>
+        <strong>Alibaba Cloud</strong> (Model Studio, na região de Singapura): recebe a foto da consulta de IA para ler a
+        etiqueta ou o painel, só quando você pede. Pelos termos do serviço, não usa o conteúdo para treinar modelos.
+      </li>
+      <li>
+        <strong>Google</strong> (API Gemini, nos Estados Unidos): recebe a foto da consulta para uma segunda leitura,
+        quando a primeira fica em dúvida, e o código, a marca e o modelo para pesquisar o significado do código de erro.
+        O SerpFix usa o nível pago, em que o conteúdo não é usado para melhorar os produtos do Google.
+      </li>
+      <li>
         <strong>WhatsApp</strong>: o PDF é enviado por você, pelo WhatsApp instalado no celular. O SerpFix não envia nada
         ao WhatsApp por servidor; a partir daí vale a política do WhatsApp.
       </li>
@@ -97,12 +124,26 @@
     </ul>
     <p>
       Sem conta, nada vai para a nuvem: os dados ficam só no celular e são apagados se o app for desinstalado ou
-      os dados do app forem limpos.
+      os dados do app forem limpos. A inteligência artificial só funciona com a conta.
+    </p>
+    <p>
+      O envio das fotos e dos textos das consultas de IA para Singapura e para os Estados Unidos é uma transferência
+      internacional feita para executar o serviço que você pede (art. 33 da LGPD), nos termos de tratamento de dados
+      de cada fornecedor.
+    </p>
+    <p>
+      <strong>Base técnica compartilhada.</strong> Para responder melhor e mais rápido, o SerpFix guarda e reaproveita
+      entre os técnicos só informações técnicas: marca, modelo, dados técnicos do aparelho, como capacidade, tensão e
+      refrigerante, e o significado de códigos de erro, com as fontes. Fotos, números de série, dados dos seus clientes,
+      ordens de serviço e os seus dados nunca entram nessa base.
     </p>
 
     <h2>5. Por quanto tempo guardamos</h2>
     <p>
-      Enquanto a sua conta existir. Ao excluir a conta, os dados e os arquivos dela são apagados da nuvem na hora.
+      Enquanto a sua conta existir, inclusive o histórico e as fotos das consultas de IA. Ao excluir a conta, os dados
+      e os arquivos dela são apagados da nuvem na hora. O registro de interesse no Pro ligado a uma conta sai com ela; o
+      registro sem conta guarda só o identificador do aparelho e números de uso, e o e-mail de aviso fica com a equipe
+      do SerpFix até a decisão sobre o Pro.
       As cópias de segurança mantidas pela Justotech são descartadas em até 30 dias, e nesse prazo só são usadas para
       recuperar o serviço em caso de falha.
     </p>

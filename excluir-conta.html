@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Excluir conta · SerpFix</title>
+  <meta name="description" content="Exclua a sua conta do SerpFix e os dados dela, mesmo sem o app instalado.">
+  <link rel="icon" href="serpfix-logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <main class="pagina">
+    <header class="topo">
+      <img src="serpfix-logo.svg" alt="" width="48" height="48">
+      <a href="./">SerpFix</a>
+    </header>
+
+    <h1>Excluir conta e dados</h1>
+    <p>
+      A exclusão apaga a sua conta do SerpFix e tudo o que está na nuvem: clientes, locais, equipamentos, ordens de
+      serviço, checklists, valores, recebimentos, fotos e PDFs. Não dá para desfazer. As cópias de segurança são
+      descartadas em até 30 dias.
+    </p>
+    <p class="secundario">
+      Com o app instalado, o caminho é <strong>Mais › Conta e nuvem › Excluir conta e dados</strong>. Sem o app, siga
+      os passos abaixo.
+    </p>
+
+    <section class="cartao" id="etapa-email" aria-labelledby="titulo-email">
+      <h2 id="titulo-email">1. Confirme que a conta é sua</h2>
+      <p class="secundario">Vamos enviar um código para o e-mail da conta.</p>
+      <form id="form-email" novalidate>
+        <label for="email">E-mail da conta</label>
+        <input id="email" type="email" autocomplete="email" inputmode="email" required>
+        <div class="acoes">
+          <button type="submit" id="enviar-codigo">Enviar código</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="cartao" id="etapa-codigo" hidden aria-labelledby="titulo-codigo">
+      <h2 id="titulo-codigo">2. Digite o código</h2>
+      <p class="secundario" id="texto-codigo"></p>
+      <form id="form-codigo" novalidate>
+        <label for="codigo">Código do e-mail</label>
+        <input id="codigo" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="10" required>
+        <div class="acoes">
+          <button type="submit" id="confirmar-codigo">Confirmar código</button>
+          <button type="button" class="secundario-botao" id="outro-email">Usar outro e-mail</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="cartao" id="etapa-excluir" hidden aria-labelledby="titulo-excluir">
+      <h2 id="titulo-excluir">3. Excluir</h2>
+      <p>Conta: <strong id="email-confirmado"></strong></p>
+      <label class="confirmacao">
+        <input type="checkbox" id="ciente">
+        <span>Entendo que a conta e todos os dados dela serão apagados e que isso não pode ser desfeito.</span>
+      </label>
+      <div class="acoes">
+        <button type="button" class="perigo" id="excluir" disabled>Excluir conta e dados</button>
+        <button type="button" class="secundario-botao" id="cancelar">Cancelar</button>
+      </div>
+    </section>
+
+    <section class="cartao" id="etapa-feito" hidden aria-live="polite">
+      <h2>Conta excluída</h2>
+      <p>
+        A conta e os dados foram apagados da nuvem. Se o app ainda estiver instalado em algum celular, os dados que
+        ficaram nele saem quando você desinstalar o app ou limpar os dados dele.
+      </p>
+    </section>
+
+    <div id="mensagem" class="mensagem" role="status" aria-live="polite" hidden></div>
+
+    <p class="secundario">
+      Não consegue receber o código? Escreva para <a href="mailto:serpfix.app@gmail.com">serpfix.app@gmail.com</a> a partir do
+      e-mail da conta, pedindo a exclusão.
+    </p>
+
+    <footer class="rodape">
+      SerpFix, da Justotech · <a href="privacidade.html">Política de Privacidade</a> · <a href="./">Início</a>
+    </footer>
+  </main>
+  <script type="module" src="excluir-conta.js"></script>
+</body>
+</html>

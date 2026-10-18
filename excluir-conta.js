@@ -40,8 +40,12 @@ $('form-email').addEventListener('submit', async (evento) => {
   avisar('');
   ocupado($('enviar-codigo'), true);
   // shouldCreateUser: false — esta página nunca cria conta. A resposta é a mesma exista ou não a
-  // conta, para a página não revelar quem usa o SerpFix.
-  const { error } = await supabase.auth.signInWithOtp({ email, options: { shouldCreateUser: false } });
+  // conta, para a página não revelar quem usa o SerpFix. O retorno nesta página faz o Auth mandar
+  // o e-mail de confirmação da exclusão, só com o código (scripts/modelos-email.mjs).
+  const { error } = await supabase.auth.signInWithOtp({
+    email,
+    options: { shouldCreateUser: false, emailRedirectTo: new URL('excluir-conta.html', location.href).href },
+  });
   ocupado($('enviar-codigo'), false);
   if (error && /rate|too many|security purposes/i.test(error.message)) {
     avisar('Muitos pedidos seguidos. Espere um minuto e tente de novo.');
